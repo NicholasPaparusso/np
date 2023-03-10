@@ -1,0 +1,29 @@
+@use './bootstrap';
+@import '_variables';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/josefin-sans";
+
+
+
+ul,ol{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    &:hover{
+        color: inherit;
+    }
+}
+
+body{
+     font-family: "Josefin Sans", sans-serif;
+    }
+
+button{
+    outline: 0px;
+    border: 0px;
+}
