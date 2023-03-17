@@ -7,16 +7,21 @@ export default {
             trigger : false,
         }
     },
+
+    methods:{
+
+    },
+
 }
 </script>
 
 <template>
-    <div class="hamburger-menu">
-        <button @click="this.trigger = !this.trigger" class="hamburger-button">
+    <div v-motion-slide-right class="hamburger-menu" tabindex="0" >
+        <button  @click="this.trigger = !this.trigger"  @focusout="this.trigger = false" class="hamburger-button">
                 <i class="fa-solid fa-bars"></i>
         </button>
-        <ul v-show="this.trigger === true" class="dropdown">
-            <li><a href="#">About me </a></li>
+        <ul class="dropdown" :class="{'hide': this.trigger}"  >
+            <li ><a href="#">About me</a></li>
             <li><a href="#">Contacts</a></li>
             <li><a href="#">CV</a></li>
         </ul>
@@ -36,7 +41,8 @@ export default {
             top: 120%;
             border-radius: 10px;
             width: 130px;
-
+            opacity: 0 !important;
+            transition: all .3s;
             a{
                 font-size: .85em;
                 font-weight: 600;
@@ -50,6 +56,11 @@ export default {
                 }
             }
         }
+
+
+        .hide{
+            opacity: 1 !important;
+            }
 
         .hamburger-button{
             font-size: 20px;
