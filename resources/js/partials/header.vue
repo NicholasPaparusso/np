@@ -103,45 +103,11 @@ ul{
             font-weight:600;
             position: relative;
             top: 0;
-
-        // &:hover::after{
-        //     opacity: 1;
-        //     transition: all .3s;
-        // }
-
-
-        //     &::after{
-        //         content: '';
-        //         position: absolute;
-        //         border-radius: 50%;
-        //         width: 7px;
-        //         height: 7px;
-        //         background-color: $white;
-        //         top: -100%;
-        //         left: 50%;
-        //         transform: translate(-50%);
-        //         transition: all .3s;
-        //         opacity: 0;
-        //     }
         }
     }
 
 }
-    .widget{
-        position: absolute;
-        left: 50%;
-        top: 150%;
-        padding: 5px 10px;
-        width: 120px;
-        border-radius: 20px;
-        background-color: $bg-dropdown;
-        opacity: 0;
-        text-align: center;
-        transition: all .3s;
-        transform: translate(-50%);
-        font-size: .85em;
-        font-weight: 500;
-    }
+
 
     .widget-holder:hover + .widget{
         opacity:1;

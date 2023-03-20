@@ -1,6 +1,13 @@
 <script>
+import widget from '../components/widget.vue'
 export default {
     name: 'Footer',
+
+    data(){
+        return{
+            widget
+        }
+    }
 
 }
 </script>
@@ -12,6 +19,7 @@ export default {
                 <a href="https://www.linkedin.com/in/nicholas-paparusso/">
                     <i class="fa-brands fa-linkedin"></i>
                     <span>Linkedin</span>
+                    <widget content="ciao" />
                 </a>
             </li>
 
