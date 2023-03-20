@@ -1,10 +1,12 @@
 <script>
+import { routesData } from '../data/data'
 export default {
     name: 'dropdown',
     props:{},
     data(){
         return{
             trigger : false,
+            routesData,
         }
     },
 
@@ -21,9 +23,11 @@ export default {
                 <i class="fa-solid fa-bars"></i>
         </button>
         <ul class="dropdown" :class="{'hide': this.trigger}"  >
-            <li ><a href="#">About me</a></li>
-            <li><a href="#">Contacts</a></li>
-            <li><a href="#">CV</a></li>
+            <li v-for="route in routesData" :key="route.id">
+                <router-link :to="{name: route.name}">
+                    {{route.show}}
+                </router-link>
+            </li>
         </ul>
     </div>
 </template>

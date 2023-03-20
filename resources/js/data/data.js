@@ -1,26 +1,32 @@
-const routesData = [{
-    path: '/',
-    name: 'home',
-    show: 'home',
-    id: '1'
+const routesData = [
+{
+    path: '/progetti',
+    name: 'projects',
+    show: 'Projects',
+    id: '4',
+    prop: 'Visualizza i miei progetti',
 },
 {
-    path: '/contatti',
-    name: 'contacts',
-    show:'Contacts',
-    id: '2',
+    path: '/',
+    name: 'homepage',
+    show: 'Home',
+    id: '1',
+    prop: 'Torna alla Home',
 },
+// {
+//     path: '/contatti',
+//     name: 'contact',
+//     show:'Contacts',
+//     id: '2',
+//     prop: 'Contatti utili',
+// },
 {
     path: '/about',
     name: 'about',
     show: 'About me',
     id: '3',
+    prop: 'Scopri di più',
 },
-{
-    path: '/progetti',
-    name: 'projects',
-    show: 'Progetti',
-    id: '4',
-}
-
 ];
+
+export { routesData }

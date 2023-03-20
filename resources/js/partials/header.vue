@@ -1,12 +1,17 @@
 <script>
 import widget from '../components/widget.vue'
 import dropdown from '../components/dropdown.vue'
-
+import {routesData} from '../data/data'
 export default {
     name: 'Header',
     components:{
         widget,
         dropdown,
+    },
+    data(){
+        return{
+            routesData,
+        }
     },
 methods:{
 
@@ -42,35 +47,22 @@ mounted(){
         <nav class="h-100 flex justify-between items-center">
 
             <div class="author">
-                <router-link :to="{name: homepage}">
-                <a href="#" class="widget-holder">
+                <router-link to="/" class="widget-holder">
                     <img src="../img/np-logo.png" alt="">
-                </a>
                 </router-link>
                 <widget class="widget" :content="'Torna alla home'"/>
             </div>
 
             <ul class="d-flex animated-ul">
-                <li class="hide">
-                    <a class="widget-holder " href="#">About me </a>
-                    <widget class="widget" :content="'Scopri di più'"/>
+                <li class="" v-for="route in routesData" :key="route.id">
+                    <router-link :to="{name: route.name}" class="widget-holder">
+                        {{route.show}}
+                    </router-link>
+                    <widget class="widget"  :content="route.prop"/>
                 </li>
-                <li class="hide">
-                    <a class="widget-holder" href="#">Contacts</a>
-                    <widget class="widget" :content="'Contatti utili'"/>
-                </li>
-                <li class="hide">
-                    <a class="widget-holder" href="#">CV</a>
-                     <widget class="widget" :content="'Scarica il mio cv'"/>
-                </li>
-
-
             </ul>
 
             <dropdown />
-
-
-
         </nav>
     </header>
 </template>
