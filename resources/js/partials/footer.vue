@@ -7,6 +7,13 @@ export default {
         widget,
     },
 
+    data(){
+        return{
+            messageNum: 'Clicca per copiare',
+            messageEmail: 'Clicca per copiare',
+        }
+    },
+
     methods:{
         scrollToTop(){
             window.scrollTo(0,0);
@@ -15,7 +22,13 @@ export default {
         async copyUrl(text){
             try {
                 await navigator.clipboard.writeText(text);
-
+                if(text == 'nicholaspaparusso@gmail.com' ){
+                    this.messageEmail = 'Email copiata';
+                    this.messageNum = 'Clicca per copiare';
+                }else{
+                    this.messageNum = 'Numero copiato';
+                    this.messageEmail = 'Clicca per copiare'
+                }
             } catch($e) {
                 alert('Cannot copy');
             }
@@ -57,13 +70,14 @@ export default {
             <li>
                 <i class="fa-solid fa-envelope"></i>
                 <span class="copy widget-holder" @click="copyUrl('nicholaspaparusso@gmail.com')">Email</span>
-                <widget class="widget" :content="'Cliccami'"/>
+                <widget class="widget" :content="this.messageEmail"/>
             </li>
 
             <li>
                 <i class="fa-solid fa-mobile-screen-button"></i>
                 <span class="copy widget-holder" @click="copyUrl('3534424640')">Telefono</span>
-                <widget class="widget" :content="'Cliccami'"/>
+                <widget class="widget" :content="this.messageNum"/>
+
             </li>
         </ul>
     </footer>
@@ -73,9 +87,10 @@ export default {
 @import '../../scss/_variables.scss';
 
 footer{
-    background: #355C7D;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(215deg $bg-start, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(215deg,  $bg-start ,#355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    // background: #355C7D;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(215deg $bg-start, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(215deg,  $bg-start ,#355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-top: 1px solid rgba(255,255,255,0.05) ;
     color: $white;
     padding: 25px 100px;
 

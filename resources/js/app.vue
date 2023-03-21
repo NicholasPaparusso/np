@@ -30,10 +30,14 @@ export default {
 
     html {
         scroll-behavior: smooth;
+        scrollbar-width: thin;
     }
 
     body{
         background-color: black;
+        background: #355C7D;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(215deg $bg-start, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(215deg,  $bg-start ,#355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 
 
