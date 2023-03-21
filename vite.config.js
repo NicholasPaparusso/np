@@ -14,10 +14,17 @@ export default defineConfig({
         }),
 
         vue({
+
             trasformAssetUrls:{
                 base: null,
                 includeAbsolute: false,
-            }
+            },
+
+            // template: {
+            //     compilerOptions: {
+            //         isCustomElement: (tag) => ['widget'].includes(tag),
+            //     }
+            // },
         }),
     ],
 });

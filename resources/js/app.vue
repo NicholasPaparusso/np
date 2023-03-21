@@ -33,7 +33,6 @@ export default {
     }
 
     body{
-        height: 100vh;
         background-color: black;
     }
 
@@ -41,7 +40,7 @@ export default {
 
     main{
         margin-top: 100px;
-        height: calc(100vh - 100px);
+        height: 100vh;
         overflow-y: auto ;
     }
 

@@ -50,7 +50,7 @@ mounted(){
                 <router-link to="/" class="widget-holder">
                     <img src="../img/np-logo.png" alt="">
                 </router-link>
-                <widget class="widget" :content="'Torna alla home'"/>
+                <widget class="widget" :content="'Torna alla Home'"/>
             </div>
 
             <ul class="d-flex animated-ul">
