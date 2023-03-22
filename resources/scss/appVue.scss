@@ -27,3 +27,23 @@ button{
     outline: 0px;
     border: 0px;
 }
+
+.active{
+    position: relative;
+    top: 0;
+    &::after{
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $white;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+// .exactive{
+//     color: yellowgreen;
+// }

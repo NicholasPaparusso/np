@@ -46,6 +46,7 @@ export default {
         margin-top: 100px;
         height: 100vh;
         overflow-y: auto ;
+        padding: 35px 100px;
     }
 
         @media only screen and (max-width: 680px){

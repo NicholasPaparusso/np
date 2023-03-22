@@ -47,9 +47,9 @@ mounted(){
         <nav class="h-100 flex justify-between items-center">
 
             <div class="author">
-                <router-link to="/" class="widget-holder">
+                <a href="/" class="widget-holder">
                     <img src="../img/np-logo.png" alt="">
-                </router-link>
+                </a>
                 <widget class="widget" :content="'Torna alla Home'"/>
             </div>
 
