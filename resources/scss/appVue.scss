@@ -28,6 +28,9 @@ button{
     border: 0px;
 }
 
+
+@media only screen and (min-width: 581px){
+
 .active{
     position: relative;
     top: 0;
@@ -43,6 +46,7 @@ button{
         left: 50%;
         transform: translate(-50%);
     }
+}
 }
 // .exactive{
 //     color: yellowgreen;

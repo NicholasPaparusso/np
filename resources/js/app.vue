@@ -1,11 +1,17 @@
 <script>
 import Header from './partials/header.vue'
 import Footer from './partials/footer.vue'
+import Home from './pages/home.vue'
+import About from './pages/about.vue'
+import Projects from './pages/projects.vue'
 export default {
     name: 'App',
     components:{
         Header,
-        Footer
+        Footer,
+        Home,
+        About,
+        Projects,
     }
 }
 </script>
@@ -14,7 +20,9 @@ export default {
     <body class="">
         <Header/>
             <main>
-                <router-view> </router-view>
+                <Home />
+                <About/>
+                <Projects/>
             </main>
             <Footer/>
         </body>
@@ -44,14 +52,14 @@ export default {
 
     main{
         margin-top: 100px;
-        height: 100vh;
+        height: calc(100vh - 100px);
         overflow-y: auto ;
-        padding: 35px 100px;
+        padding: 0px 100px;
     }
 
         @media only screen and (max-width: 680px){
         main{
-            padding: 35px 50px;
+            padding: 0px 50px 35px 50px;
         }
     }
 </style>

@@ -1,6 +1,6 @@
 const routesData = [
 {
-    path: '/',
+    path: '#home',
     name: 'homepage',
     show: 'Home',
     id: '1',
@@ -8,7 +8,7 @@ const routesData = [
 },
 
 {
-    path: '/progetti',
+    path: '#progetti',
     name: 'projects',
     show: 'Projects',
     id: '4',
@@ -23,7 +23,7 @@ const routesData = [
 //     prop: 'Contatti utili',
 // },
 {
-    path: '/about',
+    path: '#about',
     name: 'about',
     show: 'About me',
     id: '3',

@@ -55,9 +55,9 @@ mounted(){
 
             <ul class="d-flex animated-ul">
                 <li class="" v-for="route in routesData" :key="route.id">
-                    <router-link :to="{name: route.name}" class="widget-holder">
+                    <a :href="route.path" class="widget-holder">
                         {{route.show}}
-                    </router-link>
+                    </a>
                     <widget class="widget"  :content="route.prop"/>
                 </li>
             </ul>
@@ -71,7 +71,7 @@ mounted(){
 @import '../../scss/_variables.scss';
 
 header{
-    height: 100px;
+    height: 80px;
     width: 100%;
     position: sticky;
     top: 0;
@@ -89,7 +89,7 @@ header{
     top: 0;
     flex-shrink: 0;
     img{
-        width: 100%;
+        width: 90%;
     }
 }
 

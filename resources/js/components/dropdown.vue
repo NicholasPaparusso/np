@@ -24,9 +24,9 @@ export default {
         </button>
         <ul class="dropdown" :class="{'hide': this.trigger}"  >
             <li v-for="route in routesData" :key="route.id">
-                <router-link :to="{name: route.name}">
+                <a :href="route.path">
                     {{route.show}}
-                </router-link>
+                </a>
             </li>
         </ul>
     </div>
